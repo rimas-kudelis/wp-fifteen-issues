@@ -1,0 +1,122 @@
+/*
+ Theme Name:  Fifteen Issues
+ Template:    twentyfifteen
+ Text Domain: fifteen-issues
+*/
+
+/* Inherit serif font in site title */
+.site-title {
+  font-family: inherit;
+}
+
+/* Issue cover images are vertical. Display them differently than featured images for posts.  */
+.hentry.type-rq_issue.has-post-thumbnail {
+  padding-top: 7.6923%;
+}
+.hentry.type-rq_issue .post-thumbnail {
+  float: left;
+  margin-left: 7.6923%;
+  margin-right: 7.6923%;
+  max-width: 20%;
+}
+.hentry.type-rq_issue.has-post-thumbnail .entry-title {
+  clear: none;
+}
+.hentry.type-rq_issue.has-post-thumbnail .entry-footer {
+  clear: both;
+}
+.single-rq_issue .post-thumbnail {
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+.single-rq_issue .post-thumbnail > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ddd;
+  display: block;
+  background: rgba(0, 0, 0, 0.75);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+.single-rq_issue .post-thumbnail span span {
+  display: block;
+  padding: 5%;
+}
+.single-rq_issue .post-thumbnail:hover > span {
+  max-height: 100%;
+}
+.entry-content .issue-download-link {
+  border: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ddd;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2% 5%;
+  border-radius: 5px;
+}
+.entry-content .issue-download-link:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+@media screen and (min-width: 38.75em) {
+  .hentry.type-rq_issue .post-thumbnail {
+    margin-left: 9.0909%;
+    margin-right: 9.0909%;
+  }
+}
+@media screen and (min-width: 59.6875em) {
+  /* Lay out issues in two columns when screen is big enough. */
+  .archive .hentry.type-rq_issue {
+    font-size: 15px;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 0;
+    width: 37.5%;
+    vertical-align: top;
+  }
+  .archive .hentry.type-rq_issue .post-thumbnail-header-container {
+    position: relative;
+  }
+  .archive .hentry.type-rq_issue .entry-title {
+    font-size: 31px;
+    font-size: 3.1rem;
+    color: #ddd;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    left: 10%;
+    margin-bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+  .archive .hentry.type-rq_issue:hover .entry-title {
+    max-height: 100%;
+  }
+  .archive .hentry.type-rq_issue .entry-title a {
+    display: block;
+    padding: 5%;
+    color: inherit;
+  }
+  .hentry.type-rq_issue.has-post-thumbnail {
+    padding-top: 8.3333%;
+  }
+  .archive .hentry.type-rq_issue.has-post-thumbnail {
+    padding-top: 4%;
+  }
+  .archive .hentry.type-rq_issue .post-thumbnail {
+    display: block;
+    float: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: none;
+  }
+  .archive .hentry.type-rq_issue .post-thumbnail img {
+    width: 100%;
+  }
+}
