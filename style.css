@@ -69,6 +69,14 @@
   }
 }
 @media screen and (min-width: 59.6875em) {
+  /* Automatically reveal all submenu items and hide the toggle button. */
+  .main-navigation ul li ul {
+    display: block;
+  }
+  .main-navigation .dropdown-toggle {
+    display: none;
+  }
+
   /* Lay out issues in two columns when screen is big enough. */
   .archive .hentry.type-rq_issue {
     font-size: 15px;
