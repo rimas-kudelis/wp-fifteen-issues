@@ -13,7 +13,7 @@ msgstr ""
 msgid "Download"
 msgstr "Parsisiųsti"
 
-msgid "Download whole issue"
+msgid "Download complete issue"
 msgstr "Parsisiųsti visą leidinį"
 
 msgid "Articles"
