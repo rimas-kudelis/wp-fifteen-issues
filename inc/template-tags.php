@@ -14,7 +14,7 @@ function fifteen_issues_post_thumbnail() {
 
 	if ( is_singular() ) :
 
-        $url = post_custom('issue-pdf');
+        $url = post_custom('issue_pdf');
         if ($url) : ?>
             <a href="<?= $url ?>" class="post-thumbnail">
                 <?php the_post_thumbnail(); ?>

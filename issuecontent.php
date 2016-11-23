@@ -29,6 +29,81 @@
 								the_title( '<span class="screen-reader-text">', '</span>', false )
 							) );
 
+							/* List articles */
+							$articles = maybe_unserialize(post_custom('issue_articles'));
+							if (!empty($articles) && is_array($articles)) {
+								if (!empty(trim(get_the_content()))) {
+									?>
+									<h2><?= __('Articles', 'fifteen-issues') ?></h2>
+									<?php
+								}
+								?>
+								<ul class="issue-articles">
+								<?php
+								$in_group = false;
+								foreach ($articles as $article) {
+									if (empty($article['title'])) {
+										continue;
+									}
+
+									if (empty($article['group_title'])) {
+										?>
+										<li>
+											<?php
+											if (!empty($article['author'])) {
+												?>
+												<b><?= $article['author'] ?>.</b>
+												<?php
+											}
+											echo $article['title'];
+											if (!empty($article['url'])) {
+												?>
+												<a class="issue-download issue-download-article" href="<?= $article['url'] ?>"><?= __( 'Download', 'fifteen-issues' ) ?></a>
+												<?php
+											}
+											?>
+										</li>
+										<?php
+									} else {
+										if ($in_group) {
+											?>
+											</ul></li><li>
+											<?php
+										} else {
+											?>
+											<li>
+											<?php
+											$in_group = true;
+										}
+										?>
+										<b>
+											<?php
+											if (empty($article['url'])) {
+												echo $article['title'];
+											} else {
+												?>
+												<a class="issue-download issue-download-group" href="<?= $article['url'] ?>"><?= $article['title'] ?></a>
+												<?php
+											}
+											?>
+										</b>
+										<ul>
+										<?php
+									}
+									?>
+									<?php
+								}
+								if ($in_group) {
+									?>
+									</ul>
+									</li>
+									<?php
+								}
+								?>
+								</ul>
+								<?php
+							}
+
 							wp_link_pages( array(
 								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
 								'after'       => '</div>',
@@ -38,13 +113,11 @@
 								'separator'   => '<span class="screen-reader-text">, </span>',
 							) );
 
-							$url = post_custom('issue-pdf');
+							$url = post_custom('issue_pdf');
 							if ($url) :
 								?>
-								<p class="issue-download">
-									<a href="<?= $url ?>" class="issue-download-link">
-										<?= __( 'Download whole issue', 'fifteen-issues' ) ?>
-									</a>
+								<p class="issue-download-para">
+									<a href="<?= $url ?>" class="issue-download issue-download-whole"><?= __( 'Download whole issue', 'fifteen-issues' ) ?></a>
 								</p>
 								<?php
 							endif;
