@@ -117,7 +117,7 @@
 							if ($url) :
 								?>
 								<p class="issue-download-para">
-									<a href="<?= $url ?>" class="issue-download issue-download-whole"><?= __( 'Download whole issue', 'fifteen-issues' ) ?></a>
+									<a href="<?= $url ?>" class="issue-download issue-download-complete"><?= __( 'Download complete issue', 'fifteen-issues' ) ?></a>
 								</p>
 								<?php
 							endif;
