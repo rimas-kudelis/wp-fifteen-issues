@@ -49,6 +49,9 @@
 .single-rq_issue .post-thumbnail:hover > span {
   max-height: 100%;
 }
+.entry-content .issue-download {
+  white-space: nowrap;
+}
 .entry-content .issue-download::before {
   content: url('img/download.svg');
   display: inline-block;
