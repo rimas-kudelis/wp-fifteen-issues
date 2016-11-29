@@ -52,7 +52,7 @@
 											<?php
 											if (!empty($article['author'])) {
 												?>
-												<b><?= $article['author'] ?>.</b>
+												<b><?= $article['author'] ?>.</b><br />
 												<?php
 											}
 											echo $article['title'];
