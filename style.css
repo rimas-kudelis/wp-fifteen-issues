@@ -79,6 +79,12 @@
   }
 }
 
+@media screen and (min-width: 46.25em) {
+  .main-navigation ul ul {
+    margin-left: 2em;
+  }
+}
+
 /* Desktop Small 955px */
 @media screen and (min-width: 59.6875em) {
 
@@ -96,6 +102,12 @@
   }
   .entry-content h3, .entry-summary h3, .page-content h3, .comment-content h3 {
     font-size: 2.1rem;
+  }
+  .entry-content h4, .entry-summary h4, .page-content h4, .comment-content h4 {
+    font-size: 1.8rem;
+  }
+  .entry-content h5, .entry-content h6, .entry-summary h5, .entry-summary h6, .page-content h5, .page-content h6, .comment-content h5, .comment-content h6 {
+    font-size: 1.6rem;
   }
   .entry-footer {
     font-size: 1.3rem;
