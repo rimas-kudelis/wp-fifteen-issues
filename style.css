@@ -100,6 +100,14 @@ ol > li:before {
 }
 */
 
+/* Main menu */
+.main-navigation ul.nav-menu > li > a {
+  font-weight: bold;
+}
+.main-navigation ul.nav-menu > li > a div {
+  font-weight: normal;
+}
+
 /* Mobile Large 620px */
 @media screen and (min-width: 38.75em) {
   .hentry.type-rq_issue .post-thumbnail {
