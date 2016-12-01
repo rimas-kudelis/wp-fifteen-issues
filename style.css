@@ -26,6 +26,7 @@
   clear: both;
 }
 .single-rq_issue .post-thumbnail {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   font-weight: bold;
   position: relative;
   text-align: center;
@@ -49,6 +50,8 @@
 .single-rq_issue .post-thumbnail:hover > span {
   max-height: 100%;
 }
+
+/* Issue download links */
 .entry-content .issue-download {
   white-space: nowrap;
 }
