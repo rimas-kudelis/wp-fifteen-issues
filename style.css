@@ -71,6 +71,32 @@
   text-decoration: underline;
 }
 
+/* Examples */
+blockquote.example {
+  font-size: inherit;
+  font-style: normal;
+}
+blockquote.example i, blockquote.example em, blockquote.example cite {
+  font-style: italic;
+}
+blockquote.example b, blockquote.example strong {
+  font-weight: bold;
+}
+
+/* Nested ordered lists */
+/*
+ol {
+  counter-reset: item;
+}
+ol > li {
+  display: block;
+}
+ol > li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+*/
+
 /* Mobile Large 620px */
 @media screen and (min-width: 38.75em) {
   .hentry.type-rq_issue .post-thumbnail {
