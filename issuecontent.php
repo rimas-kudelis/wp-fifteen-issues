@@ -62,10 +62,11 @@
 									<b><?= $article['author'] ?>.</b><br />
 									<?php
 								}
-								echo $article['title'];
-								if (!empty($article['url'])) {
+								if (empty($article['url'])) {
+									echo $article['title'];
+								} else {
 									?>
-									<a class="issue-download issue-download-article" href="<?= $article['url'] ?>"><?= __( 'Download', 'fifteen-issues' ) ?></a>
+									<a class="issue-download issue-download-article" href="<?= $article['url'] ?>"><?= $article['title'] ?></a>
 									<?php
 								}
 								?>
