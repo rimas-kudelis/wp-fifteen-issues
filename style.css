@@ -14,7 +14,6 @@
   padding-top: 7.6923%;
 }
 .hentry.type-rq_issue .post-thumbnail {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   float: left;
   margin-left: 7.6923%;
   margin-right: 7.6923%;
@@ -56,14 +55,6 @@
 }
 
 /* Issue download links */
-.entry-content .issue-download {
-  white-space: nowrap;
-}
-.entry-content .issue-download::before {
-  content: url('img/download.svg');
-  display: inline-block;
-  vertical-align: middle;
-}
 .entry-content .issue-download-complete {
   border: 0;
   background: rgba(0, 0, 0, 0.75);
@@ -72,6 +63,11 @@
   text-decoration: none;
   padding: 2% 5%;
   border-radius: 5px;
+}
+.entry-content .issue-download-complete::before {
+  content: url('img/download.svg');
+  display: inline-block;
+  vertical-align: middle;
 }
 .entry-content .issue-download-complete:hover {
   color: #ddd;
