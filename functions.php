@@ -33,6 +33,16 @@ endif; // fifteen_issues_styles
 add_action( 'wp_enqueue_scripts', 'fifteen_issues_styles', PHP_INT_MAX);
 
 
+if ( ! function_exists( 'fifteen_issues_thumbnail_sizes' ) ) :
+/**
+ * Adds custom thumbnail size for issue covers
+ */
+function fifteen_issues_thumbnail_sizes() {
+	add_image_size( 'fifteen-issues-issue-cover', 220, 440, false );
+}
+endif; // fifteen_issues_thumbnail_sizes
+add_action( 'after_setup_theme', 'fifteen_issues_thumbnail_sizes' );
+
 /**
  * Custom template tags for this theme.
  *
