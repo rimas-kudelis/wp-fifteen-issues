@@ -11,7 +11,7 @@
 	<div class="post-thumbnail-header-container">
 		<?php
 			// Post thumbnail.
-			fifteen_issues_post_thumbnail();
+			fifteen_issues_issue_thumbnail();
 		?>
 
 		<header class="entry-header">
