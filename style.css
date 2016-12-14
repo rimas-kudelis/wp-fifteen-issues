@@ -183,6 +183,7 @@ ol > li:before {
   }
   .archive .hentry.type-rq_issue .entry-title {
     color: #ddd;
+    font-size: 18px;
     font-size: 1.8rem;
     position: absolute;
     bottom: 0;
