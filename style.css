@@ -39,7 +39,7 @@
 .hentry.type-rq_issue.has-post-thumbnail .entry-footer {
   clear: both;
 }
-.hentry.type-rq_issue.has-post-thumbnail .entry-footer:empty {
+.hentry.type-rq_issue .entry-footer:empty {
   display: none;
 }
 .single-rq_issue .post-thumbnail {
