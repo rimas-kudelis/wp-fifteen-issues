@@ -25,6 +25,9 @@
 .hentry.type-rq_issue.has-post-thumbnail .entry-footer {
   clear: both;
 }
+.hentry.type-rq_issue.has-post-thumbnail .entry-footer:empty {
+  display: none;
+}
 .single-rq_issue .post-thumbnail {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   font-weight: bold;
@@ -70,33 +73,34 @@
   color: #ddd;
   text-decoration: underline;
 }
+/* Mobile Large 620px */
 @media screen and (min-width: 38.75em) {
   .hentry.type-rq_issue .post-thumbnail {
     margin-left: 9.0909%;
     margin-right: 9.0909%;
   }
 }
+/* Desktop Small 955px */
 @media screen and (min-width: 59.6875em) {
-  /* Lay out issues in two columns when screen is big enough. */
+  /* Lay out issues in three columns. */
   .archive .hentry.type-rq_issue {
-    font-size: 15px;
-    font-size: 1.5rem;
     display: inline-block;
+    margin-left: 8.3333%;
     margin-right: 0;
-    width: 37.5%;
+    width: 22.2222%;
     vertical-align: top;
   }
   .archive .hentry.type-rq_issue .post-thumbnail-header-container {
     position: relative;
   }
   .archive .hentry.type-rq_issue .entry-title {
-    font-size: 31px;
-    font-size: 3.1rem;
     color: #ddd;
+    font-size: 23px;
+    font-size: 2.3rem;
     position: absolute;
     bottom: 0;
-    right: 10%;
-    left: 10%;
+    right: 0;
+    left: 0;
     margin-bottom: 0;
     background: rgba(0, 0, 0, 0.75);
     max-height: 0;
@@ -108,20 +112,19 @@
   }
   .archive .hentry.type-rq_issue .entry-title a {
     display: block;
-    padding: 5%;
+    padding: 10%;
     color: inherit;
   }
   .hentry.type-rq_issue.has-post-thumbnail {
     padding-top: 8.3333%;
   }
   .archive .hentry.type-rq_issue.has-post-thumbnail {
-    padding-top: 4%;
+    padding-top: 0;
   }
   .archive .hentry.type-rq_issue .post-thumbnail {
     display: block;
     float: none;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0;
     max-width: none;
   }
   .archive .hentry.type-rq_issue .post-thumbnail img {
