@@ -9,11 +9,6 @@
  */
 ?><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-thumbnail-header-container">
-		<?php
-			// Post thumbnail.
-			fifteen_issues_issue_thumbnail();
-		?>
-
 		<header class="entry-header">
 			<?php
 				if ( !is_single() ) :
@@ -23,6 +18,11 @@
 				endif; // is_single()
 			?>
 		</header><!-- .entry-header -->
+
+		<?php
+			// Post thumbnail.
+			fifteen_issues_issue_thumbnail();
+		?>
 	</div>
 
 	<?php
