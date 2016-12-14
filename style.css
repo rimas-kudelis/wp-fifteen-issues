@@ -9,18 +9,32 @@
   font-family: inherit;
 }
 
+.hentry::after {
+  content: '';
+  clear: both;
+  display: block;
+}
 /* Issue cover images are vertical. Display them differently than featured images for posts.  */
 .hentry.type-rq_issue.has-post-thumbnail {
   padding-top: 7.6923%;
 }
-.hentry.type-rq_issue .post-thumbnail {
+.hentry.type-rq_issue.has-post-thumbnail .entry-header {
+  float: left;
+  padding-right: 0;
+  width: 64.6154%;
+}
+.hentry.type-rq_issue.has-post-thumbnail .post-thumbnail {
   float: right;
   margin-left: 7.6923%;
   margin-right: 7.6923%;
   max-width: 20%;
+  opacity: 1; /* avoid transparency on hover */
 }
 .hentry.type-rq_issue.has-post-thumbnail .entry-title {
   clear: none;
+}
+.hentry.type-rq_issue.has-post-thumbnail .entry-content {
+  clear: left;
 }
 .hentry.type-rq_issue.has-post-thumbnail .entry-footer {
   clear: both;
@@ -110,6 +124,9 @@ ol > li:before {
 
 /* Mobile Large 620px */
 @media screen and (min-width: 38.75em) {
+  .hentry.type-rq_issue.has-post-thumbnail .entry-header {
+    width: 61.8182%;
+  }
   .hentry.type-rq_issue .post-thumbnail {
     margin-left: 9.0909%;
     margin-right: 9.0909%;
@@ -214,6 +231,7 @@ ol > li:before {
     float: none;
     margin: 0;
     max-width: none;
+    opacity: 1; /* avoid transparency on hover */
   }
   .archive .hentry.type-rq_issue .post-thumbnail img {
     width: 100%;
