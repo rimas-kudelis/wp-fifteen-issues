@@ -11,11 +11,16 @@
 	<div class="post-thumbnail-header-container">
 		<header class="entry-header">
 			<?php
-				if ( !is_single() ) :
-					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+				$issue_date = post_custom('issue_date');
+				if ( !empty( $issue_date ) ) :
+					$issue_date = ' | ' . $issue_date;
+				endif;
+
+				if ( is_single() ) :
+					the_title( '<h1 class="entry-title">', $issue_date . '</h1>' );
 				else :
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				endif; // is_single()
+					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), $issue_date . '</a></h2>' );
+				endif;
 			?>
 		</header><!-- .entry-header -->
 
