@@ -18,3 +18,9 @@ msgstr "Parsisiųsti visą leidinį"
 
 msgid "Articles"
 msgstr "Straipsniai"
+
+msgid "Top Widget Area"
+msgstr "Viršutinė valdiklių zona"
+
+msgid "Add widgets here to appear at the top of your sidebar."
+msgstr "Sudėkite valdiklius čia, ir jie atsiras jūsų tinklalapio šoninės srities viršuje."

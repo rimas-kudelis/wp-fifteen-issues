@@ -142,6 +142,11 @@ ol > li:before {
 /* Desktop Small 955px */
 @media screen and (min-width: 59.6875em) {
 
+  /* Less margin under the header, so that the language selector looks in place. */
+  .site-header {
+    margin-bottom: 5%;
+  }
+
   /* Reduce font sizes.
    * Taken from https://oliverdowling.com.au/2015/02/20/wordpress-twentyfifteen-font-size/
    */

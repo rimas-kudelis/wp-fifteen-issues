@@ -44,6 +44,22 @@ endif; // fifteen_issues_thumbnail_sizes
 add_action( 'after_setup_theme', 'fifteen_issues_thumbnail_sizes' );
 
 /**
+ * Registers additional widget area.
+ */
+function fifteen_issues_widgets_init() {
+        register_sidebar( array(
+                'name'          => __( 'Top Widget Area', 'fifteen-issues' ),
+                'id'            => 'sidebar-2',
+                'description'   => __( 'Add widgets here to appear at the top of your sidebar.', 'fifteen-issues' ),
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</aside>',
+                'before_title'  => '<h2 class="widget-title">',
+                'after_title'   => '</h2>',
+        ) );
+}
+add_action( 'widgets_init', 'fifteen_issues_widgets_init' );
+
+/**
  * Custom template tags for this theme.
  *
  * @since Twenty Fifteen 1.0
